@@ -9,6 +9,12 @@ export default {
 				"clamp-lg" : "60rem",
 				"clamp-md" : "40rem",
 				"clamp-sm" : "30rem"
+			},
+			gridColumn : {
+				"first" : "1/2"
+			},
+			gridRow : {
+				"first" : "1/2"
 			}
 		}
 	},

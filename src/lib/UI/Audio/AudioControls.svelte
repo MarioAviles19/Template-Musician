@@ -1,13 +1,12 @@
 <script lang=ts>
     import { getContext, onMount } from "svelte";
-    import { FormatSecondsToMinutesAndSeconds } from ".";
+    import { scale } from "svelte/transition";
+    import {Pause, Play} from "lucide-svelte"
+    import { FormatSecondsToMinutesAndSeconds, type context } from ".";
     import { ctx } from ".";
 
-    interface Ictx {
-        GetAudio : any,
-        time : {currentTime : number, duration : number}
-    }
-    const { GetAudio, time} = getContext(ctx) as Ictx;
+
+    const { GetAudio, time} = getContext(ctx) as context;
     let audioEl : HTMLAudioElement;
 
 
@@ -15,8 +14,13 @@
         audioEl = GetAudio();
     })
 
-    function PauseAudio(){
+    function TogglePause(){
+        console.log("ow")
+        //TODO: Fix this
+        //can probably make audioEl $state 
+        if(!audioEl){
         audioEl = GetAudio();
+        }
         if(audioEl){
             if(audioEl.paused){
                 audioEl.play()
@@ -28,5 +32,12 @@
 
 </script>
 
-<button onclick={PauseAudio}>Pause</button>
-{FormatSecondsToMinutesAndSeconds(time.duration)}
+<button class="grid w-fit" onclick={TogglePause}>
+
+    {#if time.paused}
+            <span class="col-first row-first" transition:scale><Play/></span>
+    {:else}
+            <span class="col-first row-first" transition:scale><Pause/></span>
+    {/if}
+</button>
+

@@ -1,6 +1,5 @@
 <script>
-	import Audio from "$lib/UI/Audio/Audio.svelte";
-	import AudioControls from "$lib/UI/Audio/AudioControls.svelte";
+    import PortfolioCard from "$lib/Components/PortfolioCard.svelte";
     import Section from "$lib/UI/Section.svelte";
 
 </script>
@@ -32,6 +31,13 @@
         deserunt mollit anim id est laborum.</p>
 </Section>
 
-<Audio file="Lazy Day.mp3">
-    <AudioControls/>
-</Audio>
+<Section>
+    <PortfolioCard title="Lazy Day" artist="Jimmie John" file="Lazy Day.mp3">
+        <p class="font-semibold">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </PortfolioCard>
+</Section>
