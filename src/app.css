@@ -4,5 +4,20 @@
 
 :root{
     font-family: Inter, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    --color-background : white;
+    --color-background : rgb(241, 241, 241);
+    --color-soft-black : rgb(37, 37, 37);
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+body{
+    background: var(--color-background);
+    overflow-x: hidden;
+}
+input{
+    border: 2px solid var(--color-soft-black)
+}
+textarea{
+    border: 2px solid var(--color-soft-black)
 }

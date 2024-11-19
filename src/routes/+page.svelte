@@ -1,61 +1,39 @@
 <script>
+    import ContactForm from "$lib/Components/ContactForm.svelte";
     import PortfolioCard from "$lib/Components/PortfolioCard.svelte";
 	import Carousel from "$lib/UI/Carousel.svelte";
 	import Collapsible from "$lib/UI/Collapsible.svelte";
     import Section from "$lib/UI/Section.svelte";
 	import Sticky from "$lib/UI/Sticky.svelte";
 
-    const songs = [
-        {
-            title: "Lazy Day", 
-            artist: "Jimmie John", 
-            file: "Lazy Day.mp3", 
-            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            title: "Lazy Day 2", 
-            artist: "Jimmie John", 
-            file: "Lazy Day.mp3", 
-            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            title: "Lazy Day 3", 
-            artist: "Jimmie John", 
-            file: "Lazy Day.mp3", 
-            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            title: "Lazy Day 4", 
-            artist: "Jimmie John", 
-            file: "Lazy Day.mp3", 
-            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        ]
+    
 </script>
 
 
 <div class="min-h-[25rem] bg-gradient-to-br from-black via-gray-800 to-black p-4">
-    <h1 class="font-bold text-6xl text-transparent text-center bg-clip-text bg-gradient-to-r w-fit m-auto from-white via-white to-white">John Doe - Producer</h1>
+    <h1 class="font-bold text-4xl text-transparent text-center bg-clip-text bg-gradient-to-r w-fit m-auto mt-8 from-white via-white to-white">John Doe</h1>
+    <p class="text-white text-center text-xl">Producer</p>
+
 </div>
 <Sticky class="bg-white shadow-md">
     <Section>
             <nav class="font-bold sm:text-xl text-base">
                 <li class="list-none m-auto flex justify-between items-center max-w-clamp-sm">
                     <ul>
-                        <a class="py-2" href="/">About</a>
+                        <a class="py-2" href="#About">About</a>
                     </ul>
                     <ul>
-                        <a class="py-2" href="/">Portfolio</a>
+                        <a class="py-2" href="#Portfolio">Portfolio</a>
                     </ul>
                     <ul>
-                        <a class="py-2" href="/">Contact</a>
+                        <a class="py-2" href="#Contact">Contact</a>
                     </ul>
                 </li>
             </nav>
     </Section>
 </Sticky>
 
-<Section>
+<Section id="About">
     <h2 class="text-2xl font-bold">About</h2>
     {#snippet Body()}
     <p class="font-semibold mb-10">Lorem ipsum odor amet, consectetuer adipiscing elit. Interdum varius euismod quisque ultrices eros. Et quisque est velit dapibus nulla facilisis parturient mus. Adipiscing magnis bibendum arcu aenean in sociosqu senectus. Vestibulum sed eros laoreet quam sollicitudin. Magnis hac himenaeos blandit mi aenean. Potenti finibus eu dapibus dapibus adipiscing varius semper malesuada.
@@ -83,7 +61,7 @@
     </div>
 </Section>
 
-<Section>
+<Section id="Portfolio">
     <h2 class="text-2xl font-bold">Portfolio</h2>
     <p class="font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
@@ -120,6 +98,12 @@
 
     </PortfolioCard>
 
+</Section>
 
+<Section id="Contact">
+    <h2 class="text-2xl font-bold">Contact</h2>
+    <p class="font-semibold mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <ContactForm/>
 </Section>
 

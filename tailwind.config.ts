@@ -5,6 +5,16 @@ export default {
 
 	theme: {
 		extend: {
+			width:{
+				"clamp-lg" : "60rem",
+				"clamp-md" : "40rem",
+				"clamp-sm" : "30rem"
+			},
+			minWidth:{
+				"clamp-lg" : "60rem",
+				"clamp-md" : "40rem",
+				"clamp-sm" : "30rem"
+			},
 			maxWidth:{
 				"clamp-lg" : "60rem",
 				"clamp-md" : "40rem",
@@ -17,10 +27,12 @@ export default {
 				"first" : "1/2"
 			},
 			boxShadow : {
-				"inner-bottom" : "inset 0 -25px 30px -12px rgb(0 0 0 / 0.25)" 
+				"inner-bottom" : "inset 0 -25px 30px -12px rgb(0 0 0 / 0.25)",
+				"3xl" : "0 25px 50px -10px rgb(0 0 0 / 0.35)"
 			},
 			colors : {
-				"background" : "white"
+				"background" : "var(--color-background)",
+				"soft-black" : "var(--color-soft-black)"
 			}
 		}
 	},

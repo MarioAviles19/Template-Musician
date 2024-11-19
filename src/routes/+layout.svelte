@@ -3,6 +3,9 @@
 	let { children } = $props();
 </script>
 
-<div class="min-h-16"></div>
 
-{@render children()}
+<main class="shadow-2xl">{@render children()}</main>
+
+<footer class="bg-soft-black p-4">
+<p class="text-white text-center">&copy 2024</p>
+</footer>

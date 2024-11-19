@@ -29,13 +29,14 @@
     }
     AudioElement.subscribe(el=>{
 
-        if(!el){
-            return
-        }
+
         if(el !== audioElement){
-            audioElement?.pause()
-            //TODO: Consider not resetting time
-            audioElement.currentTime = 0;
+            if(el){
+                
+                audioElement?.pause()
+                //TODO: Consider not resetting time
+                audioElement.currentTime = 0;
+            }
         }
     })
     function ResetAudio(){
