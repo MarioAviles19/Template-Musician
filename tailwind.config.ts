@@ -15,6 +15,12 @@ export default {
 			},
 			gridRow : {
 				"first" : "1/2"
+			},
+			boxShadow : {
+				"inner-bottom" : "inset 0 -25px 30px -12px rgb(0 0 0 / 0.25)" 
+			},
+			colors : {
+				"background" : "white"
 			}
 		}
 	},

@@ -2,24 +2,39 @@
     import { Audio } from "$lib/UI/Audio";
 	import type { Snippet } from "svelte";
 
-    let {file, title, artist, children = undefined} : {file : string, title : string, artist : string, children? : Snippet} = $props()
+    let {file, title, artist, description, thumbnail} : {file : string, title : string, artist : string, description? : string, thumbnail? : Snippet} = $props()
     let playing = $state(false);
+    //TODO: Add collapseable reading section
 </script>
 
-<div class="max-w-clamp-sm transition-shadow overflow-hidden rounded-lg relative shadow-2xl p-4 bg-white {playing? "active": ""}">
-    <div class="bg-gradient-to-tr w-[6rem] h-[6rem] m-auto rounded-md from-purple-500 to-pink-500 "></div>
-    <Audio.Root bind:isPlaying={playing} file={file}>
-        <h4 class="text-center font-bold text-lg">{title}</h4>
-        <p class="text-center font-semibold text-sm">{artist}</p>
-        <div class="flex items-center justify-start gap-2">
-            <Audio.Controls/>
-            <Audio.ProgressBar/>
+<div class="test sm:max-w-none max-w-clamp-sm transition-shadow my-2 overflow-hidden rounded-lg relative shadow-2xl  p-4 bg-white {playing? "active": ""}">
+    <div class="flex items-center justify-start gap-4">
+        <div>
+            {#if thumbnail}
+                    {@render thumbnail()}
+                {:else}
+                <div class="bg-gradient-to-tr w-[6rem] h-[6rem] m-auto rounded-md from-purple-500 to-pink-500 "></div>
+            {/if}
         </div>
-        <p class="text-center text-sm"><Audio.Time/></p>
+        <Audio.Root bind:isPlaying={playing} file={file}>
+
+        <div class="w-full">
+            <h4 class="text-center font-bold text-lg sm:text-left">{title}</h4>
+            <p class="text-center font-semibold text-sm sm:text-left">{artist}</p>
+                <div class="flex items-center justify-start sm:w-full gap-2">
+                    <Audio.Controls/>
+                    <Audio.ProgressBar/>
+                    <p class="text-center text-sm whitespace-nowrap font-bold"><Audio.Time/></p>
+
+                </div>
+            
+        </div>
+
     </Audio.Root>
-    {#if children}
-        {@render children()}
-    {/if}
+
+    </div>
+
+
 
 </div>
 
