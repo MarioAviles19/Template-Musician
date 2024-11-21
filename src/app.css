@@ -6,6 +6,7 @@
     font-family: Inter, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --color-background : rgb(241, 241, 241);
     --color-soft-black : rgb(37, 37, 37);
+    --color-glass : rgba(255, 255, 255, 0.395);
 }
 html{
     scroll-behavior: smooth;

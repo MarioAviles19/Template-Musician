@@ -1,10 +1,14 @@
 <script>
     import ContactForm from "$lib/Components/ContactForm.svelte";
-    import PortfolioCard from "$lib/Components/PortfolioCard.svelte";
+    // @ts-ignore
+    import PortfolioCard from "$lib/Components/PortfolioCard.svelte"
 	import Carousel from "$lib/UI/Carousel.svelte";
 	import Collapsible from "$lib/UI/Collapsible.svelte";
     import Section from "$lib/UI/Section.svelte";
 	import Sticky from "$lib/UI/Sticky.svelte";
+    import Bluesky from "$lib/UI/Logos/Bluesky.svelte";
+	import SoundCloud from "$lib/UI/Logos/SoundCloud.svelte";
+    import Instagram from "$lib/UI/Logos/Instagram.svelte";
 
     
 </script>
@@ -13,6 +17,17 @@
 <div class="min-h-[25rem] bg-gradient-to-br from-black via-gray-800 to-black p-4">
     <h1 class="font-bold text-4xl text-transparent text-center bg-clip-text bg-gradient-to-r w-fit m-auto mt-8 from-white via-white to-white">John Doe</h1>
     <p class="text-white text-center text-xl">Producer</p>
+    <div class="flex justify-center items-center gap-3 text-glass">
+        <a href="/">
+            <Bluesky size={30}/>
+        </a>
+        <a href="/">
+            <Instagram size={30}/>
+        </a>
+        <a href="/">
+            <SoundCloud size={30}/>
+        </a>
+    </div>
 
 </div>
 <Sticky class="bg-white shadow-md">
@@ -68,14 +83,14 @@
         nulla pariatur.
     </p>
 
-    <PortfolioCard title="Lazy Day" artist="John Coach" file="Lazy Day.mp3" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+    <PortfolioCard tags={["Artist"]} title="Lazy Day" artist="John Doe" file="Lazy Day.mp3" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
             sunt in culpa qui officia deserunt mollit anim id est laborum.">
     </PortfolioCard>
 
-    <PortfolioCard title="Love From The Milky Way" artist="Maria LaGuarta" file="Lazy Day.mp3" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+    <PortfolioCard tags={["Producer", "Writer"]} title="Love From The Milky Way" artist="Maria LaGuarta" file="Lazy Day.mp3" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
@@ -86,7 +101,7 @@
             {/snippet}
 
     </PortfolioCard>
-    <PortfolioCard title="There Will Never Be Another You" artist="Kim Kitsuragi" file="Lazy Day.mp3" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+    <PortfolioCard tags={["Producer"]} title="There Will Never Be Another You" artist="Kim Kitsuragi" file="Lazy Day.mp3" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
