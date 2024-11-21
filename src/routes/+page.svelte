@@ -14,17 +14,16 @@
 </script>
 
 
-<div class="min-h-[25rem] bg-gradient-to-br from-black via-gray-800 to-black p-4">
-    <h1 class="font-bold text-4xl text-transparent text-center bg-clip-text bg-gradient-to-r w-fit m-auto mt-8 from-white via-white to-white">John Doe</h1>
-    <p class="text-white text-center text-xl">Producer</p>
-    <div class="flex justify-center items-center gap-3 text-glass">
-        <a href="/">
+<div class="min-h-[25rem] bg-gradient-to-br from-black via-indigo-950 to-black p-4">
+    <h1 class="font-bold text-4xl text-transparent text-center bg-clip-text bg-gradient-to-r w-fit m-auto mt-16 from-glass-200 via-glass-300 to-glass-200">John Doe</h1>
+    <div class="flex justify-center items-center gap-3 text-glass-200">
+        <a class="hover:text-glass-300 transition-all" href="/">
             <Bluesky size={30}/>
         </a>
-        <a href="/">
+        <a class="hover:text-glass-300 transition-all" href="/">
             <Instagram size={30}/>
         </a>
-        <a href="/">
+        <a class="hover:text-glass-300 transition-all" href="/">
             <SoundCloud size={30}/>
         </a>
     </div>

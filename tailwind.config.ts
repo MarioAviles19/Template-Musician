@@ -33,7 +33,9 @@ export default {
 			colors : {
 				"background" : "var(--color-background)",
 				"soft-black" : "var(--color-soft-black)",
-				"glass" : "var(--color-glass)"
+				"glass-300" : "var(--color-glass-hard)",
+				"glass-200" : "var(--color-glass-medium)",
+				"glass-100" : "var(--color-glass-soft)"
 			}
 		}
 	},

@@ -5,8 +5,11 @@
 :root{
     font-family: Inter, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --color-background : rgb(241, 241, 241);
-    --color-soft-black : rgb(37, 37, 37);
-    --color-glass : rgba(255, 255, 255, 0.395);
+    --color-soft-black : rgb(46, 46, 46);
+    --color-glass-soft : rgba(255, 255, 255, 0.318);
+    --color-glass-medium : rgba(255, 255, 255, 0.395);
+    --color-glass-hard : rgba(255, 255, 255, 0.659);
+    --color-accent-1 : rgb(205, 72, 205);
 }
 html{
     scroll-behavior: smooth;
@@ -15,10 +18,21 @@ html{
 body{
     background: var(--color-background);
     overflow-x: hidden;
+    max-width: 100svw;
 }
 input{
-    border: 2px solid var(--color-soft-black)
+    border: 2px solid var(--color-soft-black);
+    transition: all 200ms ease;
 }
 textarea{
-    border: 2px solid var(--color-soft-black)
+    border: 2px solid var(--color-soft-black);
+    transition: all 200ms ease;
+}
+input:focus{
+    outline: none;
+    border-color: var(--color-accent-1)
+}
+textarea:focus{
+    outline: none;
+    border-color: var(--color-accent-1)
 }

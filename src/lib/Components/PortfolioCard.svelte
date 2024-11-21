@@ -46,7 +46,7 @@
                 <div class="bg-gradient-to-tr w-[6rem] h-[6rem] m-auto rounded-md from-purple-500 to-pink-500"></div>
             {/if}
             <div class="flex items-center justify-center absolute top-0 left-0 w-full h-full">
-                <Audio.Controls icon={{size : 34, fill : "var(--color-glass)", color : "transparent"}}/>
+                <Audio.Controls icon={{size : 34, fill : "var(--color-glass-medium)", color : "transparent"}}/>
             </div>
         </div>
 
