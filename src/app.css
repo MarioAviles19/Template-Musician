@@ -9,6 +9,7 @@
     --color-glass-soft : rgba(255, 255, 255, 0.318);
     --color-glass-medium : rgba(255, 255, 255, 0.395);
     --color-glass-hard : rgba(255, 255, 255, 0.659);
+    --color-glass-harder : rgba(255, 255, 255, 0.737);
     --color-accent-1 : rgb(205, 72, 205);
 }
 html{

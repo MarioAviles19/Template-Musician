@@ -65,7 +65,7 @@
                 </div>
         </div>
 
-        <Audio.ProgressBar class="absolute bottom-0 left-0 w-full rounded-none" barBackground={false}/> 
+        <Audio.ProgressBar class="absolute bottom-0 left-0 w-full rounded-none z-0" barBackground={false}/> 
 
 </div>
 </Audio.Root>

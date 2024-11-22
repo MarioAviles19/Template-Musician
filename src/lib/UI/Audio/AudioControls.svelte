@@ -17,7 +17,6 @@
     })
 
     function TogglePause(){
-        console.log("ow")
         //TODO: Fix this
         //can probably make audioEl $state 
         if(!audioEl){

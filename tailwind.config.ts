@@ -33,9 +33,13 @@ export default {
 			colors : {
 				"background" : "var(--color-background)",
 				"soft-black" : "var(--color-soft-black)",
+				"glass-400" : "var(--color-glass-harder)",
 				"glass-300" : "var(--color-glass-hard)",
 				"glass-200" : "var(--color-glass-medium)",
 				"glass-100" : "var(--color-glass-soft)"
+			},
+			backgroundImage : {
+				"hero" : "url('tramk.jpg')"
 			}
 		}
 	},
