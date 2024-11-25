@@ -14,9 +14,9 @@
 </script>
 
 
-<div class="h-[30rem] relative bg-gradient-to-br from-soft-black via-indigo-950 to-soft-black">
+<div class="h-[30rem] relative bg-mixer bg-cover backdrop-grayscale">
 
-    <div class="w-full h-full p-2 backdrop-grayscale">
+    <div class="w-full h-full p-2 backdrop-grayscale backdrop-brightness-90">
         <h1 class="font-bold text-4xl text-transparent text-center bg-clip-text bg-gradient-to-r w-fit m-auto mt-16 from-glass-200 via-glass-300 to-glass-200">John Doe</h1>
         <div class="flex justify-center items-center gap-3 text-glass-300">
             <a class="hover:text-glass-400 transition-all" href="/">

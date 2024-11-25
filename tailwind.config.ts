@@ -39,7 +39,7 @@ export default {
 				"glass-100" : "var(--color-glass-soft)"
 			},
 			backgroundImage : {
-				"hero" : "url('tramk.jpg')"
+				"mixer" : "url('MixerPhoto.jpg')"
 			}
 		}
 	},

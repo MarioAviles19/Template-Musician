@@ -32,22 +32,25 @@
 
     
 </script>
-<div class="grid grid-cols-3 overflow-hidden gap-1 relative w-max">
+<div class="grid grid-cols-3 overflow-hidden gap-1 relative ">
         <!-- svelte-ignore a11y_click_events_have_key_events -->
         <!-- svelte-ignore a11y_no_static_element_interactions -->
 
         {#key animate}
-                <div in:recieve={{key : 1}} out:send={{key : 0}} class="col-first row-first shrink-0 m-auto" >
+                <div in:recieve={{key : 1}} out:send={{key : 0}} class="col-first row-first m-auto" >
                     <Component {...visable[0]}/>
                 </div>
-    
-                <div in:recieve={{key:3}} out:send={{key:1}} class="col-[2/3] shrink-0 row-first m-auto" >
+        
+
+            <div class="grid"></div>
+                <div in:recieve={{key:3}} out:send={{key:1}} class="col-first row-first m-auto" >
                     <Component {...visable[1]}/>
                 </div>
-                <div in:recieve={{key:""}} out:send={{key: 3}} class="col-[3/4] shrink-0 row-first  m-auto" >
+            <div class="grid">
+                <div in:recieve={{key:""}} out:send={{key: 3}} class="col-first row-first  m-auto" >
                     <Component {...visable[2]}/>
                 </div>
-
+            </div>
 
         {/key}
 
